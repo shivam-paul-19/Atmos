@@ -1,0 +1,9 @@
+.weatherCard {
+    display: flex;
+    justify-content: center;
+}
+
+.w_box {
+    width: 300px;
+    border: 1px solid black;
+}
