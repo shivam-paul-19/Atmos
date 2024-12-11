@@ -3,15 +3,7 @@ import InfoBox from './weatherCard';
 import { useState } from 'react';
 
 export default function WeatherApp() {
-    let [info, setInfo] = useState({
-        feelsLike: 24.98,
-        humid: 94,
-        location: "Delhi",
-        max_temp: 24.06,
-        min_temp: 24.06,
-        temp: 24.06,
-        weather: "light rain"
-    });
+    let [info, setInfo] = useState("none");
 
     let updateInfo = (newInfo) => {
         setInfo(newInfo);
@@ -19,7 +11,7 @@ export default function WeatherApp() {
 
     return (
         <div>
-            <h1>Atmos Weather app</h1>
+            <img src="https://i.ibb.co/k3jm5HL/logo.png" alt="" height={50} style={{margin: '30px 0'}}/>
             <SearchBox update={updateInfo}/>
             <br />
             <InfoBox info={info}/>

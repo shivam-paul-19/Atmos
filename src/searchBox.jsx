@@ -2,7 +2,7 @@ import { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import axios from 'axios';
-;
+
 const API_URL = import.meta.env.VITE_API_URL;
 const API_KEY = import.meta.env.VITE_API_KEY;
 const W_API_URL = import.meta.env.VITE_W_API_URL;
@@ -24,7 +24,6 @@ export default function SearchBox({update}) {
             feelsLike: wJson.main.feels_like,
             weather: wJson.weather[0].description
         };
-        console.log(w_results);
         return w_results;
     }
 
@@ -34,8 +33,8 @@ export default function SearchBox({update}) {
 
     let submitCity = async (event) => {
         event.preventDefault();
-        console.log(cityName);
         setCityName("");
+        update(false);
         let newInfo = await getWeatherInfo();
         update(newInfo);
     }
@@ -43,9 +42,9 @@ export default function SearchBox({update}) {
     return (
         <>
             <form action=""  onSubmit={submitCity}>
-                <TextField id="outlined-basic" value={cityName} label="City name" variant="outlined" onChange={changeCityName} required/>
+                <TextField value={cityName} label="City name" variant="outlined" onChange={changeCityName} sx={{ backgroundColor: 'white', borderRadius: '10px' }} required/>
                 <br /><br />
-                <Button variant="contained" type='submit'>Search</Button>
+                <Button variant="contained" type='submit' sx={{background: "white", color: 'black'}}>Search</Button>
             </form>
         </>
     )

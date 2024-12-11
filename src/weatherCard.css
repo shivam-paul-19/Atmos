@@ -4,6 +4,11 @@
 }
 
 .w_box {
-    width: 300px;
-    border: 1px solid black;
+    width: 400px;
+    height: 400px;
+    border: 1px solid white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
