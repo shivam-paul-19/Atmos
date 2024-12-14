@@ -23,9 +23,11 @@ export default function InfoBox({ info }) {
               <CardContent>
                 <h2>{info.weather}</h2>
                 <Typography variant="body2" sx={{ color: "white" }}>
-                  <p>Temperature {info.temp}</p>
-                  <p>Feels like {info.feelsLike}</p>
-                  <p>Humidity {info.humid}</p>
+                  <p>Temperature: {info.temp}&deg;C</p>
+                  <p>Feels like: {info.feelsLike}&deg;C</p>
+                  <p>Humidity: {info.humid}</p>
+                  <p>Visibility: {info.visibility/1000} Kms</p>
+                  <p>Wind Speed: {info.wind_speed} Kmph</p>
                 </Typography>
               </CardContent>
             </CardActionArea>

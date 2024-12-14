@@ -8,3 +8,23 @@
   background-color: #17253A;
   color: white;
 }
+
+#forcast {
+  height: 70vh;
+  overflow-y: scroll;
+  width: 30vw;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+#forcast::-webkit-scrollbar {
+  width: 10px;
+}
+
+#forcast::-webkit-scrollbar-thumb {
+  background-color: #ffffff; /* Scrollbar color */
+  border-radius: 5px; /* Rounded corners */
+}
