@@ -11,12 +11,10 @@ export default function WeatherApp() {
     let updateInfo = (newInfo, forcast) => {
         setInfo(newInfo);
         setForcast(forcast);
-        console.log("from fn", forcast);
         setTimeout(()=> {
             setShow(true);
         }, 1000);
     }
-    console.log(forecastArray);
 
     return (
         <div style={{
